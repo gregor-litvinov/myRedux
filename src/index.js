@@ -9,7 +9,7 @@ const asyncBtn = document.getElementById("async");
 const themeBtn = document.getElementById("theme");
 
 const store = createStore(rootReducer, 0)
-
+console.log(9)
 addBtn.addEventListener("click", () => {
 store.dispatch({type: 'INCREMENT1'})
 console.log(3)
