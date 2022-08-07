@@ -17,10 +17,7 @@ store.dispatch({type: 'INCREMENT'})
 store.dispatch({ type: "DECREMENT" });
   }),
   asyncBtn.addEventListener("click", () => {
-
   }),
-
-  
 store.subscribe(() => {
   const state = store.getState()
 
