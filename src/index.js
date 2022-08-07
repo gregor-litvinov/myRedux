@@ -11,7 +11,9 @@ const themeBtn = document.getElementById("theme");
 const store = createStore(rootReducer, 0)
 
 addBtn.addEventListener("click", () => {
-store.dispatch({type: 'INCREMENT'})
+store.dispatch({type: 'INCREMENT1'})
+console.log(3)
+console.log(2)
 }),
   subBtn.addEventListener("click", () => {
 store.dispatch({ type: "DECREMENT" });
