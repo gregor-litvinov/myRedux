@@ -12,7 +12,7 @@ const themeBtn = document.getElementById("theme");
 const store = createStore(rootReducer, 0)
 
 addBtn.addEventListener("click", () => {
-
+console.log(1)
 store.dispatch({type: 'INCREMENT'})
 }),
   subBtn.addEventListener("click", () => {
