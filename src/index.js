@@ -1,9 +1,9 @@
 
-import { applyMiddleware, createStore } from './createStore';
+import { applyMiddleware, createStore } from 'redux';
 import { rootReducer } from './redux/rootReducer';
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
-import { increment } from './redux/actions';
+import { asyncIncrement, increment } from './redux/actions';
 import './styles.css'
 
 
@@ -13,9 +13,10 @@ const subBtn = document.getElementById("sub")
 const asyncBtn = document.getElementById("async");
 const themeBtn = document.getElementById("theme");
 
-const store = createStore(rootReducer, 0)
+const store = createStore(rootReducer, 0,
+   applyMiddleware(thunk))
 
-//applyMiddleware(thunk)
+
 addBtn.addEventListener("click", () => {
 store.dispatch(increment())
 
@@ -24,6 +25,7 @@ store.dispatch(increment())
 store.dispatch({ type: "DECREMENT" });
   }),
   asyncBtn.addEventListener("click", () => {
+    store.dispatch(asyncIncrement())
   }),
 store.subscribe(() => {
   const state = store.getState()
