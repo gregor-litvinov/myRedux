@@ -1,2 +1,2 @@
-export const INCRIMENT = 'INCRIMENT'
-export const DECRIMENT = "DECRIMENT";
+export const INCREMENT = "INCREMENT";
+export const DECREMENT = "DECRIMENT";
